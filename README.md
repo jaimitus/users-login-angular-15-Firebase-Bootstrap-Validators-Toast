@@ -32,9 +32,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Other advantages
 
-* Beautiful UI
 * Modularized Code
-* Error Handling
 
 ## Installation
 
