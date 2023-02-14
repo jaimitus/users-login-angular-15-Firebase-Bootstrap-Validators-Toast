@@ -10,7 +10,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Features
 
-* Furms Validators
+* Forms Validators
 * Responsive
 * Firebase Auth integration
 * Login with e-mail & password
