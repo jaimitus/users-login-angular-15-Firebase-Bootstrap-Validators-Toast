@@ -1,0 +1,62 @@
+<main class="form-signin w-100 m-auto ">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <svg class="rounded mx-auto d-block" height="72" xmlns="http://www.w3.org/2000/svg" version="1.0"
+      alt="Logo - Jaime de Justo" viewBox="0 0 1205.000000 1219.000000" preserveAspectRatio="xMidYMid meet">
+      <g transform="translate(0.000000,1219.000000) scale(0.100000,-0.100000)" fill="#6c6c6c" stroke="none">
+        <path
+          d="M9291 11773 c-5 -21 -294 -1172 -641 -2558 -877 -3503 -868 -3466 -925 -3626 -64 -180 -95 -222 -197 -267 -92 -40 -151 -47 -384 -45 l-222 2 -36 -147 c-20 -81 -70 -276 -111 -434 -41 -158 -75 -297 -75 -309 l0 -22 343 6 c359 7 534 17 732 42 338 43 646 137 809 246 89 59 275 250 340 348 154 232 274 521 385 929 112 411 1431 5715 1431 5756 0 6 -21 35 -46 64 l-46 52 -673 0 -674 0 -10 -37z" />
+        <path
+          d="M5803 11379 c-867 -39 -1772 -309 -2507 -746 -426 -254 -759 -514 -1111 -867 -759 -762 -1261 -1680 -1489 -2726 -157 -717 -161 -1562 -11 -2300 66 -323 174 -679 298 -980 l35 -85 1116 -3 c826 -1 1116 1 1116 9 0 6 -35 64 -78 128 -362 535 -572 1092 -644 1710 -16 142 -16 567 0 706 55 462 171 854 367 1246 281 559 733 1064 1243 1388 332 210 679 364 1062 470 291 80 722 129 1010 115 l135 -7 13 44 c7 24 35 143 62 264 74 325 130 494 169 511 43 19 1288 20 1331 0 8 -4 52 -59 97 -122 59 -83 82 -122 78 -138 -2 -11 -45 -185 -95 -386 -99 -397 -140 -578 -140 -616 0 -17 12 -31 43 -51 160 -101 335 -222 409 -282 48 -39 94 -71 103 -71 8 0 17 10 20 23 3 12 116 463 250 1001 178 713 242 983 234 992 -22 26 -282 167 -483 261 -656 307 -1352 476 -2106 513 -226 11 -275 11 -527 -1z" />
+        <path
+          d="M7219 10203 l-617 -3 -15 -63 c-69 -283 -1439 -5741 -1473 -5872 -82 -310 -147 -489 -198 -543 -38 -42 -143 -96 -214 -111 -38 -8 -642 -11 -2181 -11 l-2129 0 -76 -305 c-58 -233 -76 -321 -76 -374 l0 -69 63 -77 62 -76 2065 1 c1200 0 2147 5 2260 10 330 17 578 55 844 131 228 65 342 132 511 303 117 117 208 242 277 379 106 212 183 416 258 687 89 320 1453 5796 1448 5812 -2 4 -34 48 -73 98 -58 75 -73 90 -95 88 -14 -2 -302 -4 -641 -5z" />
+        <path
+          d="M10250 9418 c-6 -24 -20 -74 -30 -113 -10 -38 -159 -635 -330 -1325 l-311 -1255 20 -145 c100 -708 77 -1155 -89 -1729 -219 -758 -711 -1437 -1381 -1904 -335 -233 -762 -432 -1134 -528 -160 -42 -364 -80 -535 -101 -160 -20 -624 -17 -780 5 -328 46 -666 133 -980 254 l-115 44 -1472 6 c-1303 6 -1473 5 -1473 -9 0 -17 107 -157 249 -328 135 -161 459 -483 631 -626 571 -476 1122 -789 1790 -1019 362 -124 806 -220 1210 -260 228 -23 1035 -17 1240 9 1469 187 2729 899 3665 2071 237 297 423 590 595 940 141 286 206 441 295 710 140 418 228 844 266 1275 16 193 7 963 -14 1130 -121 969 -470 1859 -1022 2605 -128 173 -255 330 -270 333 -9 2 -18 -13 -25 -40z" />
+        <path
+          d="M3110 5278 c0 -3 -41 -166 -91 -363 l-90 -357 56 -74 c95 -127 -31 -114 1104 -111 l984 2 109 425 c59 234 108 435 108 448 l0 22 -743 0 c-409 0 -900 3 -1090 7 -191 3 -347 4 -347 1z" />
+      </g>
+    </svg>
+    <h4 class="h3 mb-3 fw-normal text-center">Iniciar sesión</h4>
+    <div class="form-floating">
+      <input type="email" formControlName="email" class="form-control" placeholder="nombre@dominio.com"
+        [ngClass]="{ 'is-invalid': submitted && f['email'].errors }" #userName required />
+      <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+        <div *ngIf="f['email'].errors['required']">Correo electronico es requerido</div>
+        <div *ngIf="f['email'].errors['email']">El correo electrónico es invalido</div>
+      </div>
+      <label for="floatingInput">Correo Electronico</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" id="floatingPassword" formControlName="password" class="form-control"
+        placeholder="Contraseña" [ngClass]="{ 'is-invalid': submitted && f['password'].errors }" #userPassword
+        required />
+      <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+        <div *ngIf="f['password'].errors['required']">Se requiere contraseña</div>
+        <div *ngIf="f['password'].errors['minlength']">
+          La contraseña debe tener al menos 6 caracteres
+        </div>
+        <div *ngIf="f['password'].errors['maxlength']">
+          La contraseña no debe exceder los 40 caracteres
+        </div>
+      </div>
+      <label for="floatingPassword">Contraseña</label>
+    </div>
+    <div class="checkbox mb-3 mt-3">
+    </div>
+    <button class="w-100 btn btn-lg btn-success mb-2" type="submit" value="Log in"
+      (click)="authService.SignIn(userName.value, userPassword.value)"><i class="bi bi-box-arrow-in-right"></i> Iniciar
+      sesión</button>
+    <button class="w-100 btn btn-lg btn-primary mb-2" type="button" (click)="authService.GoogleAuth()">
+      <i class="bi bi-google"></i>
+      Continuar con Google
+    </button>
+    <p class="mt-2 mb-1 text-muted text-center">
+      <span>¿No tiene cuenta?
+        <span routerLink="/register-user">
+          <button type="button" class="btn btn-outline-secondary btn-sm" routerlink="/register-user"><i
+              class="bi bi-person-fill-up"></i> Registrarse</button></span></span>
+    <p class="mb-1 text-muted text-center">
+      <span routerLink="/forgot-password"><button type="button" class="btn btn-outline-secondary btn-sm"
+          routerlink="/register-user"><i class="bi bi-patch-question"></i> ¿Olvidaste tu contraseña?</button></span>
+    </p>
+  </form>
+</main>
