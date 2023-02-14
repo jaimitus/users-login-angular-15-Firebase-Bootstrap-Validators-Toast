@@ -1,8 +1,12 @@
 # Description
 
-JJ-WEB Complete Login Angular 15, Firebase, Bootstrap 5, Validators, Guards(Canactivate), Toast
+JJ-WEB Complete Login Angular 15, Firebase, Bootstrap 5, Bootstrap Icons, Validators, Guards(Canactivate), Toast
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.5.
+
+![Login users and Sign Up Users](https://firebasestorage.googleapis.com/v0/b/jjweb-02.appspot.com/o/uploads%2Flogin-register-github.png?alt=media&token=b5f7ba6d-60b7-40d5-88df-00d0073636e9)
+
+![Verify Email and Forgot Password](https://firebasestorage.googleapis.com/v0/b/jjweb-02.appspot.com/o/uploads%2Femail-password-github.png?alt=media&token=b8449521-ee94-4d92-99db-32dd9d10a460)
 
 ## Features
 

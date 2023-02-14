@@ -18,24 +18,23 @@
     <h4 class="h3 mb-3 fw-normal text-center">Gracias por registrarte</h4>
     <div class="formGroup" *ngIf="authService.userData as user">
       <p class="text-center">
-        Hemos enviado un correo electrónico de confirmación a <strong>{{ user.email }}</strong>.
+        Hemos enviado un correo electrónico de confirmación a: <strong>{{ user.email }}</strong>.
       </p>
       <p class="text-center">
         Verifique su correo electrónico y haga clic en el enlace para verificar su dirección de correo electrónico.
       </p>
-      <div class="formGroup">
-        <button type="button" class="btn btnPrimary" (click)="authService.SendVerificationMail()">
-          <i class="fas fa-redo-alt"></i>
+      <div class="formGroup text-center">
+        <button type="button" class="btn btn-outline-danger btn-sm" (click)="authService.SendVerificationMail()">
+          <i class="bi bi-envelope-plus"></i>
           Reenviar correo electrónico de verificación
         </button>
       </div>
     </div>
     <div class="checkbox mb-3 mt-3">
     </div>
-    <span>¿Volver a?<span class="redirect" routerLink="/sign-in"></span>
-      <button class="w-100 btn btn-lg btn-success mb-2" type="submit" value="Log in"><i
-          class="bi bi-box-arrow-in-right"></i> Iniciar
-        sesión</button>
-    </span>
+    <span>Regresar a: </span>
+    <button class="btn btn-outline-success btn-sm" value="Log in" routerLink="/sign-in"><i
+        class="bi bi-box-arrow-in-right"></i> Iniciar
+      sesión</button>
   </form>
 </main>
