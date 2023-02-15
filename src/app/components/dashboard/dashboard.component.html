@@ -1,56 +1,43 @@
 <!-- Top navigation -->
-<nav class="navbar sticky-bottom bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">JJ WEB- Login Firebase</a>
+<nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+      aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" routerlink="/">JJ WEB - Angular 15 Firebase Login</a>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      </ul>
+      <form class="d-flex" role="search">
+        <button class="btn btn-outline-danger" type="submit" (click)="authService.SignOut()">Cerrar sesión</button>
+      </form>
+    </div>
   </div>
 </nav>
-<!-- Sidebar navigation -->
-<div class="container-fluid">
-  <div class="row">
-
-    <nav class="col-md-2 d-md-block bg-dark sidebar">
-      <div class="sidebar-sticky">
-        <ul class="nav flex-column">
-          <li class="nav-item">
-            <a class="nav-link active">
-              <i class="fas fa-user"></i>User Profile
-            </a>
-          </li>
-          <!-- Calling SignOut() Api from AuthService -->
-          <li class="nav-item">
-            <a class="nav-link" (click)="authService.SignOut()">
-              <i class="fas fa-sign-out-alt"></i>Cerrar sesión
-            </a>
-          </li>
-        </ul>
+<!-- Main content -->
+<div class="container">
+  <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+    <div class="inner-adjust">
+      <div class="pt-3 pb-2 mb-3 border-bottom">
+        <h4>Perfil de usuario</h4>
       </div>
-    </nav>
-
-    <!-- Main content -->
-    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-      <div class="inner-adjust">
-
-        <div class="pt-3 pb-2 mb-3 border-bottom">
-          <h1 class="h2">Perfil de usuario</h1>
-        </div>
-        <!-- Show user data when logged in -->
-        <div class="row" *ngIf="authService.userData as user">
-          <div class="col-md-12">
-            <div class="media">
-              <img class="align-self-start mr-5 img-thumbnail rounded-circle" src="{{(user.photoURL) ? user.photoURL : '/assets/dummy-user.png'}}"
-                alt="{{user.displayName}}">
-              <div class="media-body">
-                <h1>Saludos: <strong>{{(user.displayName) ? user.displayName : 'User'}}</strong></h1>
-                <p>ID de usuario: <strong>{{user.uid}}</strong></p>
-                <p>Email: <strong>{{user.email}}</strong></p>
-                <p>Email Verificado: <strong>{{user.emailVerified}}</strong></p>
-              </div>
+      <!-- Show user data when logged in -->
+      <div class="row" *ngIf="authService.userData as user">
+        <div class="col-md-12">
+          <div class="media">
+            <img class="align-self-start mr-5 img-thumbnail rounded-circle"
+              src="{{(user.photoURL) ? user.photoURL : '/assets/no-avatar-user.png'}}" alt="{{user.displayName}}">
+            <div class="media-body">
+              <h1>Saludos: <strong>{{(user.displayName) ? user.displayName : 'User'}}</strong></h1>
+              <p>ID de usuario: <strong>{{user.uid}}</strong></p>
+              <p>Email: <strong>{{user.email}}</strong></p>
+              <p>Email Verificado: <strong>{{user.emailVerified}}</strong></p>
             </div>
           </div>
         </div>
-
       </div>
-    </main>
-
-  </div>
+    </div>
+  </main>
 </div>
+
