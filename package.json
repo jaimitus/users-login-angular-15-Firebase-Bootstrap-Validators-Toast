@@ -30,8 +30,10 @@
     "bootstrap-icons": "^1.10.3",
     "express": "^4.15.2",
     "firebase": "^9.17.1",
+    "instead": "^1.0.3",
     "ngx-toastr": "^16.0.2",
     "rxjs": "~7.8.0",
+    "ts-evaluator": "^1.1.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
   },
