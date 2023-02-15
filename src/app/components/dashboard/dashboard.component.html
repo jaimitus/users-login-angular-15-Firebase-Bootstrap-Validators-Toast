@@ -1,15 +1,14 @@
 <!-- Top navigation -->
-<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-  <a class="navbar-brand col-sm-3 col-md-2 mr-0">
-    <img class="brand-logo" src="" alt="Jaime de Justo Logo">
-  </a>
+<nav class="navbar sticky-bottom bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">JJ WEB- Login Firebase</a>
+  </div>
 </nav>
-
 <!-- Sidebar navigation -->
 <div class="container-fluid">
   <div class="row">
 
-    <nav class="col-md-2 d-md-block bg-light sidebar">
+    <nav class="col-md-2 d-md-block bg-dark sidebar">
       <div class="sidebar-sticky">
         <ul class="nav flex-column">
           <li class="nav-item">
@@ -20,7 +19,7 @@
           <!-- Calling SignOut() Api from AuthService -->
           <li class="nav-item">
             <a class="nav-link" (click)="authService.SignOut()">
-              <i class="fas fa-sign-out-alt"></i>Log out
+              <i class="fas fa-sign-out-alt"></i>Cerrar sesión
             </a>
           </li>
         </ul>
@@ -32,7 +31,7 @@
       <div class="inner-adjust">
 
         <div class="pt-3 pb-2 mb-3 border-bottom">
-          <h1 class="h2">User Profile</h1>
+          <h1 class="h2">Perfil de usuario</h1>
         </div>
         <!-- Show user data when logged in -->
         <div class="row" *ngIf="authService.userData as user">
@@ -42,7 +41,7 @@
                 alt="{{user.displayName}}">
               <div class="media-body">
                 <h1>Saludos: <strong>{{(user.displayName) ? user.displayName : 'User'}}</strong></h1>
-                <p>User ID: <strong>{{user.uid}}</strong></p>
+                <p>ID de usuario: <strong>{{user.uid}}</strong></p>
                 <p>Email: <strong>{{user.email}}</strong></p>
                 <p>Email Verificado: <strong>{{user.emailVerified}}</strong></p>
               </div>
