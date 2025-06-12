@@ -28,7 +28,7 @@
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.10.3",
-    "express": "^4.15.2",
+    "express": "^4.21.2",
     "firebase": "^11.9.1",
     "instead": "^1.0.3",
     "ngx-toastr": "^16.0.2",
